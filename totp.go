@@ -13,7 +13,7 @@ func NewTOTP(secret string, digits, interval int, hasher *Hasher) *TOTP {
 	return &TOTP{OTP: otp, interval: interval}
 }
 
-func NewDefaultTOTP(secret string) *TOTP {
+func NewDefaultTOTP(secret string, durationInSeconds int) *TOTP {
 	return NewTOTP(secret, 6, 30, nil)
 }
 
