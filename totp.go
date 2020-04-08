@@ -14,7 +14,7 @@ func NewTOTP(secret string, digits, interval int, hasher *Hasher) *TOTP {
 }
 
 func NewDefaultTOTP(secret string, durationInSeconds int) *TOTP {
-	return NewTOTP(secret, 6, 30, nil)
+	return NewTOTP(secret, 6, durationInSeconds, nil)
 }
 
 // Generate time OTP of given timestamp
